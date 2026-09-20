@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taskboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Taskboard</h1>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Projects</h2>
+      <div class="toolbar">
+        <input id="projectSearch" type="search" placeholder="Search projects\u2026">
+        <select id="projectStatusFilter">
+          <option value="">All statuses</option>
+          <option value="active">Active</option>
+          <option value="archived">Archived</option>
+        </select>
+        <button id="newProjectBtn" type="button">New project</button>
+      </div>
+      <ul id="projectList" class="cards"></ul>
+    </section>
+
+    <section class="panel">
+      <h2>Tasks</h2>
+      <div class="toolbar">
+        <input id="taskSearch" type="search" placeholder="Search tasks\u2026">
+        <select id="taskStatusFilter">
+          <option value="">All statuses</option>
+          <option value="todo">To do</option>
+          <option value="in_progress">In progress</option>
+          <option value="done">Done</option>
+        </select>
+        <select id="taskPriorityFilter">
+          <option value="">All priorities</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button id="newTaskBtn" type="button">New task</button>
+      </div>
+      <ul id="taskList" class="cards"></ul>
+    </section>
+  </main>
+
+  <dialog id="dialog">
+    <form id="dialogForm" method="dialog">
+      <h3 id="dialogTitle"></h3>
+      <div id="dialogFields" class="form"></div>
+      <div class="actions">
+        <button type="button" id="dialogCancel">Cancel</button>
+        <button type="submit" id="dialogOk">Save</button>
+      </div>
+      <p id="dialogError" class="error hidden"></p>
+    </form>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>
