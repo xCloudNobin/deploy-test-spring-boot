@@ -1,0 +1,13 @@
+target/
+data/
+VERSION
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.env
+*.log
+.idea/
+*.iml
+.vscode/
+.DS_Store
